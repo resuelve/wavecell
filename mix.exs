@@ -23,7 +23,9 @@ defmodule Wavecell.MixProject do
   defp deps do
     [
       {:httpoison, "~> 1.3"},
-      {:jason, "~> 1.1"}
+      {:jason, "~> 1.1"},
+      {:mock, "~> 0.3.3", only: :test},
+      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false}
     ]
   end
 

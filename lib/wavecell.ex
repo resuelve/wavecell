@@ -3,16 +3,17 @@ defmodule Wavecell do
   Documentation for Wavecell.
   """
 
+  alias Wavecell.Api.Sms
+  alias Wavecell.Auth
+
+  @parser Application.get_env(:wavecell, :parser)
+
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Wavecell.hello()
-      :world
-
+  Send simple sms
   """
-  def hello do
-    :world
+  def send_sms(params) do
+    Auth.get_credentials()
+    |> Sms.send(params)
+    |> @parser.parse(:send_sms)
   end
 end
