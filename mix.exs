@@ -22,6 +22,7 @@ defmodule Wavecell.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:httpoison, "~> 1.3"},
       {:jason, "~> 1.1"},
       {:mock, "~> 0.3.3", only: :test},
@@ -31,8 +32,8 @@ defmodule Wavecell.MixProject do
 
   defp package do
     [
-      organization: "resuelve",
       files: ["lib", "mix.exs", "README.md"],
+      description: "Wavecell Elixir Client",
       maintainers: ["Oscar Olivera"],
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/resuelve/wavecell"}
