@@ -8,6 +8,10 @@ defmodule WavecellRequest do
   @endpoint "https://api.wavecell.com"
   @default_headers [{"Content-Type", "application/json"}]
 
+  def process_request_url(url) do
+    @endpoint <> url
+  end
+
   def process_request_body(body) do
     Jason.encode!(body)
   end
