@@ -6,7 +6,7 @@ defmodule Wavecell do
   alias Wavecell.Api.Sms
   alias Wavecell.Auth
 
-  @parser Application.get_env(:wavecell, :parser)
+  @parser Application.get_env(:wavecell, :parser) || Wavecell.Parser
 
   @doc """
   Send simple sms
