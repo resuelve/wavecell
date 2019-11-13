@@ -10,7 +10,7 @@ by adding `wavecell` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:wavecell, "~> 0.1.0"}
+    {:wavecell, "~> 0.1.1"}
   ]
 end
 ```
